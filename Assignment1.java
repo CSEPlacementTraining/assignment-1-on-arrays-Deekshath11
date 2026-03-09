@@ -1,8 +1,21 @@
 class Assignment1 {
   public static int[] findLeapYears(int year) {
-  // Implement your code here and change the return value accordingly
+    int[] leapYears = new int[17];
+    int count = 0;
+
+    while (count < 17) {
+
+      if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        leapYears[count] = year;
+        count++;
+      }
+
+      year++;
+    }
+
+    return leapYears;
     
-  return null;
+
   }
   
   public static void main(String[] args) {
